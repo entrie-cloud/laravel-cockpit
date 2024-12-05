@@ -1,9 +1,9 @@
 # This is my package laravelcockpit
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/entrie-cloud/laravelcockpit.svg?style=flat-square)](https://packagist.org/packages/entrie-cloud/laravelcockpit)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/entrie-cloud/laravelcockpit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/entrie-cloud/laravelcockpit/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/entrie-cloud/laravelcockpit/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/entrie-cloud/laravelcockpit/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/entrie-cloud/laravelcockpit.svg?style=flat-square)](https://packagist.org/packages/entrie-cloud/laravelcockpit)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/entrie-cloud/laravel-cockpit.svg?style=flat-square)](https://packagist.org/packages/entrie-cloud/laravel-cockpit)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/entrie-cloud/laravel-cockpit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/entrie-cloud/laravel-cockpit/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/entrie-cloud/laravel-cockpit/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/entrie-cloud/laravel-cockpit/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/entrie-cloud/laravel-cockpit.svg?style=flat-square)](https://packagist.org/packages/entrie-cloud/laravel-cockpit)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -20,7 +20,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require entrie-cloud/laravelcockpit
+composer require entrie-cloud/laravel-cockpit
 ```
 
 You can publish and run the migrations with:

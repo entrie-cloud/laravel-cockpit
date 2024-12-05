@@ -1,4 +1,4 @@
-# This is my package laravelcockpit
+# This is my package laravel-cockpit
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/entrie-cloud/laravel-cockpit.svg?style=flat-square)](https://packagist.org/packages/entrie-cloud/laravel-cockpit)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/entrie-cloud/laravel-cockpit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/entrie-cloud/laravel-cockpit/actions?query=workflow%3Arun-tests+branch%3Amain)

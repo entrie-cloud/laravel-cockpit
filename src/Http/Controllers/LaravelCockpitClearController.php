@@ -4,6 +4,8 @@ namespace EntrieCloud\LaravelCockpit\Http\Controllers;
 
 use EntrieCloud\LaravelCockpit\Facades\LaravelCockpit;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Arr;
 use Psr\Container\ContainerExceptionInterface;
@@ -17,7 +19,7 @@ class LaravelCockpitClearController extends Controller
      * @throws NotFoundExceptionInterface
      * @throws InvalidArgumentException
      */
-    public function __invoke(string $secrets): RedirectResponse
+    public function __invoke(Request $request, string $secrets): Response|RedirectResponse
     {
         $secretsArray = explode(',', $secrets);
         $secretsArray = array_filter($secretsArray);
@@ -29,6 +31,10 @@ class LaravelCockpitClearController extends Controller
         $connections
             ->each(fn ($connection) => LaravelCockpit::connection($connection)
                 ->flushCache());
+
+        if ($request->isJson()) {
+            return response()->noContent();
+        }
 
         return back();
     }

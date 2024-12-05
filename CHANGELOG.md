@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `LaravelCockpit` will be documented in this file.
+All notable changes to `laravel-cockpit` are documented in this file.
 
 ## v0.0.2 - 2024-12-05
 

@@ -1,6 +1,6 @@
 {
     "name": "entrie-cloud/laravel-cockpit",
-    "description": "This is my package laravel-cockpit",
+    "description": "Integrates Cockpit CMS with Laravel with caching.",
     "keywords": [
         "laravel",
         "cockpit",

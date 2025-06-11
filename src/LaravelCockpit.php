@@ -27,6 +27,13 @@ class LaravelCockpit {
         return str($this->apiUrl)->chopEnd('/') . str($path)->start('/');
     }
 
+    protected function prepareApiParams(array $params): array
+    {
+        $locale = app()->getLocale();
+
+        return ['lang' => $locale, 'locale' => $locale, ...$params];
+    }
+
     /**
      * @throws NotFoundExceptionInterface
      * @throws ContainerExceptionInterface
@@ -93,7 +100,7 @@ class LaravelCockpit {
     {
         return Http::withToken($this->apiKey)
             ->contentType('application/json')
-            ->get($this->prepareApiPath($path), $params)
+            ->get($this->prepareApiPath($path), $this->prepareApiParams($params))
             ->json();
     }
 
@@ -104,7 +111,7 @@ class LaravelCockpit {
     {
         return Http::withToken($this->apiKey)
             ->contentType('application/json')
-            ->post($this->prepareApiPath($path), $params)
+            ->post($this->prepareApiPath($path), $this->prepareApiParams($params))
             ->json();
     }
 
@@ -115,7 +122,7 @@ class LaravelCockpit {
     {
         return Http::withToken($this->apiKey)
             ->contentType('application/json')
-            ->delete($this->prepareApiPath($path), $params)
+            ->delete($this->prepareApiPath($path), $this->prepareApiParams($params))
             ->json();
     }
 

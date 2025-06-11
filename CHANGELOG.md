@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-cockpit` are documented in this file.
 
+## v0.1.4 - 2025-06-11
+
+**Full Changelog**: https://github.com/entrie-cloud/laravel-cockpit/compare/v0.1.3...v0.1.4
+
 ## v0.1.3 - 2025-06-11
 
 **Full Changelog**: https://github.com/entrie-cloud/laravel-cockpit/compare/v0.1.2...v0.1.3

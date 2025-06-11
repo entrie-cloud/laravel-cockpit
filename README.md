@@ -36,10 +36,10 @@ return [
     'default' => env('COCKPIT_CONNECTION', 'main'),
 
     // The URL path prefix to trigger cache clearing for Cockpit cache.
-    'cache_clear_path' => env('COCKPIT_CACHE_CLEAR_PATH', '/cockpit-clear'),
+    'cache_clear_path' => env('COCKPIT_CACHE_CLEAR_PATH', '/cockpit-cache-clear'),
 
     // The query parameter name used to bypass caching when accessing Cockpit API routes.
-    'cache_ignore_query' => env('COCKPIT_CACHE_IGNORE_QUERY', 'cockpit-ignore'),
+    'cache_ignore_query' => env('COCKPIT_CACHE_IGNORE_QUERY', 'cockpit-cache-ignore'),
 
     // List of available connections to Cockpit instances.
     'connections' => [
@@ -142,16 +142,16 @@ To enable this, set the `COCKPIT_CACHE_IGNORE_SECRET` in your `.env` file:
 COCKPIT_CACHE_IGNORE_SECRET=xxx-secret-xxx
 ```
 
-Now, your `Laravel` application will handle requests with the query parameter `?cockpit-ignore=xxx-secret-xxx` and instruct `LaravelCockpit` to skip caching for the connection matching the provided secret:
+Now, your `Laravel` application will handle requests with the query parameter `?cockpit-cache-ignore=xxx-secret-xxx` and instruct `LaravelCockpit` to skip caching for the connection matching the provided secret:
 
 ```
-https://example.org/page/cool?cockpit-ignore=xxx-secret-xxx
+https://example.org/page/cool?cockpit-cache-ignore=xxx-secret-xxx
 ```
 
 To instruct `LaravelCockpit` to skip caching for multiple connections you should separate `secrets` with comma(`,`) in URL Query.
 
 ```
-https://example.org/page/cool?cockpit-ignore=xxx-secret-xxx,xxx-secret-secondary-xxx
+https://example.org/page/cool?cockpit-cache-ignore=xxx-secret-xxx,xxx-secret-secondary-xxx
 ```
 
 ### Clear cache by URL path
@@ -164,23 +164,21 @@ To enable this, set the `COCKPIT_CACHE_CLEAR_SECRET` in your `.env` file:
 COCKPIT_CACHE_CLEAR_SECRET=xxx-secret-xxx
 ```
 
-With this configuration, your `Laravel` application will handle requests to the `/cockpit-clear/xxx-secret-xxx` path, instructing `LaravelCockpit` to clear the cache for the matching connection:
+With this configuration, your `Laravel` application will handle requests to the `/cockpit-cache-clear/xxx-secret-xxx` path, instructing `LaravelCockpit` to clear the cache for the matching connection:
 
 ```
-https://example.org/cockpit-clear/xxx-secret-xxx
+https://example.org/cockpit-cache-clear/xxx-secret-xxx
 ```
 
 To clear the cache for multiple connections simultaneously, separate the `secrets` with a comma(`,`) in the URL query:
 
-To instruct `LaravelCockpit` to clear cache for multiple connections you should separate `secrets` with comma(`,`) in URL path.
-
 ```
-https://example.org/cockpit-clear/xxx-secret-xxx,xxx-secret-secondary-xxx
+https://example.org/cockpit-cache-clear/xxx-secret-xxx,xxx-secret-secondary-xxx
 ```
 
 Behavior
-- **Browser Request:** After visiting the `/cockpit-clear` path, you will be redirected back to the previous page.
-- **AJAX Request:** When making an AJAX request to the `/cockpit-clear` path, a `204 HTTP status` is returned.
+- **Browser Request:** After visiting the `/cockpit-cache-clear` path, you will be redirected back to the previous page.
+- **AJAX Request:** When making an AJAX request to the `/cockpit-cache-clear` path, a `204 HTTP status` is returned.
 
 ## Changelog
 

@@ -6,10 +6,10 @@ return [
     'default' => env('COCKPIT_CONNECTION', 'main'),
 
     // The URL path prefix to trigger cache clearing for Cockpit cache.
-    'cache_clear_path' => env('COCKPIT_CACHE_CLEAR_PATH', '/cockpit-clear'),
+    'cache_clear_path' => env('COCKPIT_CACHE_CLEAR_PATH', '/cockpit-cache-clear'),
 
     // The query parameter name used to bypass caching when accessing Cockpit API routes.
-    'cache_ignore_query' => env('COCKPIT_CACHE_IGNORE_QUERY', 'cockpit-ignore'),
+    'cache_ignore_query' => env('COCKPIT_CACHE_IGNORE_QUERY', 'cockpit-cache-ignore'),
 
     // List of available connections to Cockpit instances.
     'connections' => [
